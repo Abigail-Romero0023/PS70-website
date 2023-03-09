@@ -212,17 +212,82 @@
                         data = cap1.Update();
                         Serial.println(data);
                       }
-                      
-                  </code>
-                  <p> I then turned to calibrating my sensor, by slowly pouring in different increments of known volume. See below for a plot of the data.</p>
-                  <img src="desmos_plotting.jpg" width="800" 
-                  height="500"  alt="plot" />
-                  <h2 class="section-title text-black mb-3">Multimeter Readings</h2>
-                  <div>
-                    <p>I used a multimeter to measure the current going from the potentiometer to the motor, when the potentiometer was turned all the way up. I expected this to be ~5 V, and got 5.13 V. I measured that the current was 422 mA. From here, I use Ohm's Law to determine that 5.13 V / 422 mA = 12 Ω of resistance. Nice!</p>
-                    <img src="IMG_6175.jpeg" width="200" 
-                  height="300"  alt="Measuring with Multimeter" />
-          </div>
+                  </code></pre> 
+                 <p> I then turned to calibrating my sensor, by slowly pouring in different increments of known volume. See below for a plot of the data.</p>
+                 <img src="demos_plot.jpg" width="800" 
+                   height="auto"  alt="plot" />
+                   <p></p>
+                   <div class="portfolio-single-inner">
+                    <h2 class="heading-portfolio-single-h2 text-black">Microphone!</h2>
+          
+                    <div class="row mb-5 align-items-stretch">
+          
+                      <div class="col-lg-6 mb-5 mb-lg-0">
+                        <img src="0B3277C5-7934-471E-8AFB-6AF5ED17C545_1_105_c.jpeg" alt="Image of microphone setup" class="img-fluid">
+                      </div>
+          
+                      <div class="col-lg-6 pl-lg-5">
+                        <div class="row mb-3">
+                          <div class="col-sm-6 col-md-6 col-lg-6 mb-4">
+                            <div class="detail-v1">
+                              <span class="detail-label">Project Date</span>
+                              <span class="detail-val">March 7th, 2023</span>
+                            </div>
+                          </div>
+                          <div class="col-sm-6 col-md-6 col-lg-6 mb-4">
+                            <div class="detail-v1">
+                              <span class="detail-label">Elements</span>
+                              <span class="detail-val"><a href="#">Circuitry</a>, <a href="#">Input Device</a></span>
+                            </div>
+                          </div>
+                          <div class="col-sm-6 col-md-6 col-lg-6 mb-4">
+                            <div class="detail-v1">
+                              <span class="detail-label">Is it cool?</span>
+                              <span class="detail-val">Yes</span>
+                            </div>
+                          </div>
+                          <div class="col-sm-6 col-md-6 col-lg-6 mb-4">
+                            <div class="detail-v1">
+                              <span class="detail-label">Inspiration</span>
+                              <span class="detail-val">Isa!</span>
+                            </div>
+                          </div>
+                        </div> 
+                    
+                        <!-- <div class="custom-block" data-aos="fade-up"> -->
+                        </ul>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                        <div class="custom-block" data-aos="fade-up">
+                          <h2 class="section-title text-black mb-3">Materials</h2>
+                          <ul class="list-unstyled ul-check primary">
+                            <li>Microphone</li>
+                            <li>Breadboard</li>
+                            <li>Arduino Uno</li>
+                            <li>Wires & Alligator Clips</li>
+                            <li>Arduino IDE Software</li>
+                            <li>Plotting Software</li>
+                          </ul>
+            <h2 class="section-title text-black mb-3">Introduction</h2>
+                          <div>
+                            <p>I was inspired by Isa to use a microphone in my project (: It seemed like fun, so I went ahead with the idea.</p>
+                    </div>
+                    <h2 class="section-title text-black mb-3">The Process</h2>
+                          <div>
+                            <p> For this project, I started by soldering the microphone together, making sure the microphone was facing me when inserted into the breadboard, in order to obtain the best readings.</p>
+                            <p>From here, it was a bit of a task to calibrate. I downloaded an application on my phone that captured the average amount of decibels (how loud something is) over a period of time. This worked! See below for a schema of the way the microphone works.</p>
+                            <img src="microphone_schema.jpg" height="auto" width="40%"
+                          alt="microphone schema" />
+                          <p></p>
+                          As I was calibrating, I got the graph below.
+                          <img src="desmos_2.jpg" height="auto" width="800"
+                          alt="microphone schema" />
+                          <p> The tried a couple of different "sound" inputs into the microphone, including snapping, talking, clapping, and using a drill near it (see the very first photo)! It seemed that the input recorded by the microcontroller tracked pretty nicely to the physical quantities. The graph above can be modeled using a linear regression, in which case the line of best fit is as follows:</p>
+                          <p> Y = 0.5450*X + 0.3230</p>
+                          <p> Essentially, this linear regression is saying that for every one decibel of physical quantity I increasingly "expose" the microphone to, the microphone will continue to capture about 54% of it. As you can see from the graph as well, there is clearly a positive relationship to the input recorded (y axis) and the physical quantities (x axis). I hypothesize as the sounds get louder, the microphone might start losing sensitivity, but I wasn't able to generate extremely large sounds in the lab so this is yet to be determined.</p>
+                    
         </div>
       </div>
     </div>
