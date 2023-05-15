@@ -90,12 +90,12 @@
       <div class="portfolio-single-wrap unslate_co--section" id="portfolio-single-section">
 
         <div class="portfolio-single-inner">
-          <h2 class="heading-portfolio-single-h2 text-black">GlowLights</h2>
+          <h2 class="heading-portfolio-single-h2 text-black">Drawing Machine</h2>
 
           <div class="row mb-5 align-items-stretch">
 
-            <div class="col-lg-6 mb-5 mb-lg-0">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/m57kUqvE7Bc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="col-lg-3 mb-5 mb-lg-0">
+              <img src="IMG_6557_MOV_AdobeExpress.gif" alt="drawing machine" class="img-fluid">
             </div>
 
             <div class="col-lg-6 pl-lg-5">
@@ -103,30 +103,25 @@
                 <div class="col-sm-6 col-md-6 col-lg-6 mb-4">
                   <div class="detail-v1">
                     <span class="detail-label">Project Date</span>
-                    <span class="detail-val">May 9th, 2023</span>
+                    <span class="detail-val">May 2nd, 2023</span>
                   </div>
                 </div>
                 <div class="col-sm-6 col-md-6 col-lg-6 mb-4">
                   <div class="detail-v1">
                     <span class="detail-label">Elements</span>
-                    <span class="detail-val"><a href="#">LEDs</a>, <a href="#">IoT</a>, <a href="#">3D Printing</a>, <a href="#">Microcontroller (ESP32), <a href="#">Laser Cutting</a></span>
+                    <span class="detail-val"><a href="#">Hand Tools</a>, <a href="#">Stepper Motors</a>, <a href="#">Laser Cutting</a></span>
                   </div>
                 </div>
                 <div class="col-sm-6 col-md-6 col-lg-6 mb-4">
                   <div class="detail-v1">
-                    <span class="detail-label">Links to CAD Files</span>
-                    <span class="detail-val"><a download href='Triangle-Walls.stl'>Download the black triangle wall file </a> 
-                        <p></p>
-                        <a download href='Triangle-Base.stl'>Download the white triangle base file </a> 
-                        <p></p>
-                        <a download href='triangles_dxf.dxf'>Download the triangle acrylic sheet file </a> 
-                    </span>
+                    <span class="detail-label">Is it large?</span>
+                    <span class="detail-val">Yes</span>
                   </div>
                 </div>
                 <div class="col-sm-6 col-md-6 col-lg-6 mb-4">
                   <div class="detail-v1">
                     <span class="detail-label">Inspiration</span>
-                    <span class="detail-val"><a href="https://www.instructables.com/3D-Print-Your-Own-Nanoleaf-Project-Alexa-Hue-and-A/">This Instructables Tutorial</a></span>
+                    <span class="detail-val">Nathan's Drawing Machine</span>
                   </div>
                 </div>
               </div> 
@@ -140,37 +135,40 @@
               <div class="custom-block" data-aos="fade-up">
                 <h2 class="section-title text-black mb-3">Materials</h2>
                 <ul class="list-unstyled ul-check primary">
-                  <li>5v LEDs</li>
-                  <li>10mm LED connectors</li>
-                  <li>Translucent white acrylic sheets</li>
-                  <li>ESP32 dev board</li>
-                  <li>M3x8 bolts (flathead preferred)</li>
-                  <li>Microusb to usb adapter</li>
-                  <li>5v USB power block</li>
+                  <li>2m 20x60 aluminum bars</li>
+                  <li>2 stepper motors</li>
+                  <li>Laser cut parts (including gears)</li>
+                  <li>ESP32 S2</li>
+                  <li>USB Battery Pack</li>
+                  <li>Belt (for gantry system)</li>
+                  <li>3D printed end effector</li>
                 </ul>
-  <h2 class="section-title text-black mb-3">Motivation</h2>
+  <h2 class="section-title text-black mb-3">Introduction</h2>
                 <div>
-                  <p>I really wanted to create something with LEDs, that I would be able to display on my wall. I've always really liked the look of NanoLeaf smart lights, but they can cost hundreds of dollars to purchase. As I was searching the internet, I came across the Instructables tutorial linked above to create one on my own. How exciting! I took this as a sign from the universe that embarking on creating my own NanoLeaf was a worthy endeavor.</p>
+                  <p>I really wanted to use Firebase this week, based off of an in-class demonstration from Kassia (also based off of a chat we had during office hours).</p>
           </div>
-          <h2 class="section-title text-black mb-3">The Process (Condensed)</h2>
+          <h2 class="section-title text-black mb-3">The Process</h2>
                 <div>
-                <p><a href="portfolio-single-10.html">Please look here for a more in-depth process.</a> </p>
-                  <p> For this project, I first started by 3D printing the necessary black triangle walls and the white triangle bases. I used print settings of 0.3mm layers, no brim or supports, and changed the infill to 30 percent. From here, I imported the triangle walls stl file into Fusion 360 to trace a triangle file that I would then use to laser cut the white translucent white acrylic sheets. From here, I took the 5v LEDs I had and cut them into strips of 24 pixels each (roughly the circumference of a triangle). 
-                    From here, most of what was left was to put together all the different components!</p>
-                  <img src="IMG_6539.jpg" width="800" 
-                  height="auto"  alt="parts to create light display" />
-                  <p>   </p>
-                  <p>   </p>
-                  <p>See below for a prototype of just two panels with an Arduino Uno. After I nailed down two panels, adding additional panels was relatively straightforward.</p>
-                  <img src="IMG_6536_MOV_AdobeExpress.gif" width="800" 
-                  height="auto"  alt="gif of two panel prototpye" />
-                  <p>Now, for the software piece I installed <a href="https://install.wled.me/">WLED</a> onto my ESP32 dev board, in order to wirelessly control the LEDs from a nice interface. Please view the demo above to see this in action! The last thing I did for this project was connect the LEDs to an external power supply. This was not difficult, and all it took was connecting power, ground and signal to the ESP32, and then using a microusd to usd adapter to connect the ESP32 to an external 5v power supply. Please see the schematic below.</p>
-                  <img src="Screen Shot 2023-05-14 at 8.32.46 PM.png" width="800" 
-                  height="auto"  alt="schematic of electronics for project" />
+                  <p> For this project, I started by following a YouTube video on setting up Firebase, which I was able to do. <a href="https://youtu.be/aO92B-K4TnQ">Link to Tutorial I Followed</a></p>
+                  <img src="Screen Shot 2023-04-06 at 1.00.30 PM.png" width="800" 
+                  height="auto"  alt="firebase setup jpeg" />
+                  <p>From here, I set up my LED circuit using the Blink tutorial from Arduino <a href="https://www.arduino.cc/en/Tutorial/BuiltInExamples/Blink">Link to Blink Example</a> </p>
+                  <p></p>
+                  <p></p>
+                  <p>I then turned to using Nathan's code to "connect" the circuit to the internet. I will drop the code below for completeness, but I just copy and pasted the code Nathan provides in class, making sure I was hooking up the LED to pin 5.</p>
+                  
+                  <p>From here, I was able to use the Firebase realtime database to switch my LED from  "off" to "on." Feel free to see the GIF above to see me do this in action!</p>
+                  <img src="Realtime Database.png" width="800" 
+                   height="auto"  alt="Realtime database screengrab" />
+          </div>
         </div>
+      </div>
       </div>
     </div>
 
+
+
+    
     <div class="site-footer">
       <div class="container">
 
